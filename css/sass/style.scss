@@ -1,0 +1,243 @@
+$bg-blue: #00baf0;
+$link-pink: #fa68be;
+$link-grey: #999999;
+$link-blue: #0071bb;
+$link-footer: #666666;
+$font: "Arial";
+$central: 100px;
+
+* {
+  margin: 0;
+
+}
+
+@mixin screen() {
+  min-width: 980px;
+  max-width: 1400px;
+}
+
+@mixin active() {
+  padding: 12px 20px;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: $bg-blue;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+@mixin nav() {
+  list-style-type: none;
+  padding: 10px;
+  margin-left: $central;
+}
+
+@mixin triangle($width, $dir, $color) {
+  @if $dir == down {
+    height: 0;
+    width: 0;
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-top: $width solid $color;
+  }
+}
+
+body {
+  @include screen;
+  margin-top: 60px;
+  font-family: $font;
+  color: #333333;
+  overflow-x: hidden;
+}
+
+.main-nav__items {
+  @include nav;
+  float: left;
+}
+
+.main-nav__item {
+  display: inline-block;
+  padding: 10px;
+  color: $link-blue;
+}
+
+.main-nav__item--active {
+  @include active;
+  &::after {
+    position: absolute;
+    left: 175px;
+    top: 120px;
+    content: "";
+    @include triangle(15px, down, $bg-blue);
+
+  }
+}
+
+.main-nav__user-items {
+  list-style-type: none;
+  text-align: right;
+
+}
+
+.main-nav__user-item {
+  font-size: 13px;
+  text-decoration-style: dashed;
+  -webkit-text-decoration-style: dashed;
+}
+
+.main-nav__user-login {
+  color: $link-pink;
+}
+
+.main-nav__user-login::before {
+  content: url("../../images/lock.png");
+  position: relative;
+  top: 2px;
+  padding: 5px;
+}
+
+.main-nav__user-register {
+  color: $link-grey;
+}
+
+.header {
+  width: 100vw;
+  background-color: $bg-blue;
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  & span {
+    font-weight: bold;
+  }
+  margin-top: 80px;
+}
+
+.header__text {
+  text-shadow: 1px 1px 2px #0096e7;
+}
+
+.content {
+  margin-left: $central;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.content__left {
+  width: 50%;
+  float: left;
+}
+
+.content__advantages {
+  float: left;
+  width: 60%;
+  margin-bottom: 60px;
+}
+
+.special__item {
+  margin: 20px;
+  height: 100px;
+}
+
+.specials__italy {
+  -background: url("../../images/italy.png") no-repeat;
+  height: 100px;
+  position: relative;
+}
+
+.content__title {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.advantages__list {
+  margin: 10px;
+  list-style-image: url("../../images/star.png");
+}
+
+.advantages__list-item {
+  padding: 5px;
+}
+
+.content__more {
+  color: $link-blue;
+}
+
+.service__title {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.content__service {
+  float: right;
+}
+
+.banner {
+  width: 100%;
+  clear: both;
+}
+
+.banner__image {
+  border: 1px solid #dcdcdc;
+  padding: 45px;
+  text-align: center;
+  margin: $central;
+  color: #ededed;
+  margin-top: 45px;
+  margin-bottom: 5px;
+}
+
+.banner__ad {
+  margin: $central;
+  color: #666666;
+  font-size: 13px;
+}
+
+.footer {
+  width: 100vw;
+  margin-top: 10px;
+  padding: 60px;
+  background-color: #f9f9f9;
+}
+
+.footer__contacts {
+  width: 50%;
+  float: left;
+  margin: 10px;
+  color: #666666;
+  padding-top: 15px;
+}
+
+.footer__left, .footer__contacts-link {
+  font-size: 13px;
+  color: #666666;
+}
+
+.contact__phone {
+  padding-bottom: 5px;
+}
+
+.footer__payment-methods {
+  margin-top: -15px;
+}
+
+.footer__copyright {
+  padding: 10px;
+}
+
+.footer__link {
+  width: 21%;
+  float: right;
+  margin-top: 10px;
+  color: $link-grey;
+  font-size: 13px;
+}
+
+.footer__share {
+  float: right;
+  padding: 3px;
+  margin-right: 75px;
+}
+
+
+
+
