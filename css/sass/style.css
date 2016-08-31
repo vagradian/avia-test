@@ -1,19 +1,18 @@
 * {
-  margin: 0; }
+  margin: 0;
+  font-family: "Arial"; }
 
-body {
-  min-width: 980px;
-  max-width: 1400px;
-  margin-top: 60px;
-  font-family: "Arial";
-  color: #333333;
-  overflow-x: hidden; }
+.central {
+  min-width: 980px; }
+
+.main-nav {
+  margin: 30px 100px; }
 
 .main-nav__items {
   list-style-type: none;
   padding: 10px;
-  margin-left: 100px;
-  float: left; }
+  float: left;
+  font-size: 20px; }
 
 .main-nav__item {
   display: inline-block;
@@ -29,8 +28,8 @@ body {
   border-radius: 4px; }
   .main-nav__item--active::after {
     position: absolute;
-    left: 175px;
-    top: 120px;
+    left: 185px;
+    top: 95px;
     content: "";
     height: 0;
     width: 0;
@@ -40,7 +39,8 @@ body {
 
 .main-nav__user-items {
   list-style-type: none;
-  text-align: right; }
+  text-align: right;
+  padding-top: 25px; }
 
 .main-nav__user-item {
   font-size: 13px;
@@ -63,24 +63,33 @@ body {
   width: 100vw;
   background-color: #00baf0;
   padding: 10px;
-  color: #ffffff;
-  text-align: center;
-  margin-top: 80px; }
-  .header span {
-    font-weight: bold; }
+  text-align: left;
+  color: #ffffff; }
 
 .header__text {
-  text-shadow: 1px 1px 2px #0096e7; }
+  text-shadow: 1px 1px 2px #0096e7;
+  color: #ffffff;
+  margin-left: 90px;
+  font-size: 20px;
+  line-height: 1.5; }
+  .header__text span {
+    font-weight: bold;
+    color: #ffffff; }
 
 .content {
-  margin-left: 100px;
-  margin-top: 20px;
-  padding: 10px;
-  width: 100%; }
+  margin: 40px 100px;
+  width: 100%;
+  color: #333333; }
 
 .content__left {
   width: 50%;
-  float: left; }
+  float: left;
+  display: inline-block; }
+
+.content__specials {
+  display: inline-block;
+  margin-left: 60px;
+  min-width: 40%; }
 
 .content__advantages {
   float: left;
@@ -88,24 +97,28 @@ body {
   margin-bottom: 60px; }
 
 .special__item {
-  margin: 20px;
-  height: 100px; }
+  min-height: 125px;
+  color: #ffffff; }
 
 .specials__italy {
-  -background: url("../../images/italy.png") no-repeat;
-  height: 100px;
-  position: relative; }
+  background: url("../../images/italy.png") no-repeat; }
+
+.specials__india {
+  background: url("../../images/india.png") no-repeat; }
+
+.specials__usa {
+  background: url("../../images/usa.png") no-repeat; }
 
 .content__title {
   font-size: 21px;
   margin-bottom: 20px; }
 
 .advantages__list {
-  margin: 10px;
-  list-style-image: url("../../images/star.png"); }
+  margin: 10px; }
 
 .advantages__list-item {
-  padding: 5px; }
+  padding: 5px;
+  list-style-image: url("../../images/star.png"); }
 
 .content__more {
   color: #0071bb; }
@@ -117,60 +130,63 @@ body {
 .content__service {
   float: right; }
 
+.fa {
+  color: #0071bb;
+  vertical-align: middle; }
+
 .banner {
-  width: 100%;
-  clear: both; }
+  margin: 5px 100px; }
 
 .banner__image {
   border: 1px solid #dcdcdc;
   padding: 45px;
   text-align: center;
-  margin: 100px;
-  color: #ededed;
-  margin-top: 45px;
-  margin-bottom: 5px; }
+  color: #ededed; }
 
 .banner__ad {
-  margin: 100px;
   color: #666666;
   font-size: 13px; }
 
 .footer {
-  width: 100vw;
   margin-top: 10px;
-  padding: 60px;
-  background-color: #f9f9f9; }
+  background-color: #f9f9f9;
+  padding: 10px; }
 
 .footer__contacts {
-  width: 50%;
   float: left;
   margin: 10px;
   color: #666666;
+  font-size: 13px;
   padding-top: 15px; }
 
-.footer__left, .footer__contacts-link {
-  font-size: 13px;
+.footer__left {
+  float: left; }
+
+.footer__left, .footer__right {
+  margin: 40px 80px; }
+
+.contact__phone, .footer__contacts-link {
+  padding-bottom: 5px;
   color: #666666; }
 
-.contact__phone {
-  padding-bottom: 5px; }
+.footer__copyright {
+  padding: 10px;
+  color: #666666; }
 
 .footer__payment-methods {
-  margin-top: -15px; }
+  text-align: right;
+  padding-bottom: 7px; }
 
-.footer__copyright {
-  padding: 10px; }
+.footer__share {
+  padding-left: 280px; }
 
 .footer__link {
-  width: 21%;
   float: right;
-  margin-top: 10px;
   color: #999999;
   font-size: 13px; }
 
-.footer__share {
-  float: right;
-  padding: 3px;
-  margin-right: 75px; }
+.wrapper {
+  overflow-x: hidden;
+  min-width: 900px; }
 
 /*# sourceMappingURL=style.css.map */

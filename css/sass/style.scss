@@ -8,12 +8,7 @@ $central: 100px;
 
 * {
   margin: 0;
-
-}
-
-@mixin screen() {
-  min-width: 980px;
-  max-width: 1400px;
+  font-family: $font;
 }
 
 @mixin active() {
@@ -28,7 +23,6 @@ $central: 100px;
 @mixin nav() {
   list-style-type: none;
   padding: 10px;
-  margin-left: $central;
 }
 
 @mixin triangle($width, $dir, $color) {
@@ -41,17 +35,18 @@ $central: 100px;
   }
 }
 
-body {
-  @include screen;
-  margin-top: 60px;
-  font-family: $font;
-  color: #333333;
-  overflow-x: hidden;
+.central {
+  min-width: 980px;
+}
+
+.main-nav {
+  margin: 30px $central;
 }
 
 .main-nav__items {
   @include nav;
   float: left;
+  font-size: 20px;
 }
 
 .main-nav__item {
@@ -64,8 +59,8 @@ body {
   @include active;
   &::after {
     position: absolute;
-    left: 175px;
-    top: 120px;
+    left: 185px;
+    top: 95px;
     content: "";
     @include triangle(15px, down, $bg-blue);
 
@@ -75,6 +70,7 @@ body {
 .main-nav__user-items {
   list-style-type: none;
   text-align: right;
+  padding-top: 25px;
 
 }
 
@@ -103,28 +99,38 @@ body {
   width: 100vw;
   background-color: $bg-blue;
   padding: 10px;
+  text-align: left;
   color: #ffffff;
-  text-align: center;
-  & span {
-    font-weight: bold;
-  }
-  margin-top: 80px;
 }
 
 .header__text {
   text-shadow: 1px 1px 2px #0096e7;
+  color: #ffffff;
+  margin-left: 90px;
+  font-size: 20px;
+  line-height: 1.5;
+  & span {
+    font-weight: bold;
+    color: #ffffff;
+  }
 }
 
 .content {
-  margin-left: $central;
-  margin-top: 20px;
-  padding: 10px;
+  margin: 40px $central;
   width: 100%;
+  color: #333333;
 }
 
 .content__left {
   width: 50%;
   float: left;
+  display: inline-block;
+}
+
+.content__specials {
+  display: inline-block;
+  margin-left: 60px;
+  min-width: 40%;
 }
 
 .content__advantages {
@@ -134,14 +140,20 @@ body {
 }
 
 .special__item {
-  margin: 20px;
-  height: 100px;
+  min-height: 125px;
+  color: #ffffff;
 }
 
 .specials__italy {
-  -background: url("../../images/italy.png") no-repeat;
-  height: 100px;
-  position: relative;
+  background: url("../../images/italy.png") no-repeat;
+}
+
+.specials__india {
+  background: url("../../images/india.png") no-repeat;
+}
+
+.specials__usa {
+  background: url("../../images/usa.png") no-repeat;
 }
 
 .content__title {
@@ -151,11 +163,11 @@ body {
 
 .advantages__list {
   margin: 10px;
-  list-style-image: url("../../images/star.png");
 }
 
 .advantages__list-item {
   padding: 5px;
+  list-style-image: url("../../images/star.png");
 }
 
 .content__more {
@@ -171,73 +183,75 @@ body {
   float: right;
 }
 
+.fa {
+  color: $link-blue;
+  vertical-align: middle;
+}
+
 .banner {
-  width: 100%;
-  clear: both;
+  margin: 5px $central;
 }
 
 .banner__image {
   border: 1px solid #dcdcdc;
   padding: 45px;
   text-align: center;
-  margin: $central;
   color: #ededed;
-  margin-top: 45px;
-  margin-bottom: 5px;
 }
 
 .banner__ad {
-  margin: $central;
   color: #666666;
   font-size: 13px;
 }
 
 .footer {
-  width: 100vw;
   margin-top: 10px;
-  padding: 60px;
   background-color: #f9f9f9;
+  padding: 10px;
 }
 
 .footer__contacts {
-  width: 50%;
   float: left;
   margin: 10px;
   color: #666666;
+  font-size: 13px;
   padding-top: 15px;
 }
 
-.footer__left, .footer__contacts-link {
-  font-size: 13px;
-  color: #666666;
+.footer__left {
+  float: left;
 }
 
-.contact__phone {
+.footer__left, .footer__right {
+  margin: 40px 80px;
+}
+
+.contact__phone, .footer__contacts-link {
   padding-bottom: 5px;
-}
-
-.footer__payment-methods {
-  margin-top: -15px;
+  color: #666666;
 }
 
 .footer__copyright {
   padding: 10px;
+  color: #666666;
+}
+
+.footer__payment-methods {
+  text-align: right;
+  padding-bottom: 7px;
+}
+
+.footer__share {
+padding-left: 280px;
 }
 
 .footer__link {
-  width: 21%;
   float: right;
-  margin-top: 10px;
   color: $link-grey;
   font-size: 13px;
 }
 
-.footer__share {
-  float: right;
-  padding: 3px;
-  margin-right: 75px;
+.wrapper {
+  overflow-x: hidden;
+  min-width: 900px;
 }
-
-
-
-
