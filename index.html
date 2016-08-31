@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="fonts/font-awesome-4.4.0/css/font-awesome.min.css">
 </head>
 <body>
-<div class="warapper">
 <nav class="main-nav">
     <ul class="main-nav__items">
         <li class="main-nav__item"><a href="#" class="main-nav__item main-nav__item--active">Авиабилеты</a></li>
@@ -15,10 +14,10 @@
         <li class="main-nav__item"><a href="#" class="main-nav__item">Отель + перелет</a></li>
         <div class="triangle"></div>
     </ul>
-    <div class="main-nav__user-items">
-        <a href="#" class="main-nav__user-item main-nav__user-login">Войти в личный кабинет</a><br>
-        <a href="#" class="main-nav__user-item main-nav__user-register">Регистрация для партнеров</a>
-    </div>
+    <ul class="main-nav__user-items">
+        <li class="main-nav__user-item"><a href="#" class="main-nav__user-item main-nav__user-login">Войти в личный кабинет</a></li>
+        <li class="main-nav__user-item"><a href="#" class="main-nav__user-item main-nav__user-register">Регистрация для партнеров</a></li>
+    </ul>
 </nav>
 <header class="header">
     <div class="header__text">
@@ -31,11 +30,11 @@
     <div class="content__advantages">
         <div class="content__title">Почему это удобно?</div>
         <p class="advantages__text">Сервис позволяет Вам легко и быстро забронировать авиаперелет на выгодных условиях. Мы постоянно работаем над развитием и улучшением сервиса.</p>
-        <ul class="advantages__list">
-            <li class="advantages__list-item">Более <strong>800 авиакомпаний</strong></li>
-            <li class="advantages__list-item"><strong>Выгодные</strong> тарифы</li>
-            <li class="advantages__list-item"><strong>Скидки</strong> и бонусы</li>
-        </ul>
+        <div class="advantages__list">
+            <div class="advantages__list-item">Более <strong>800 авиакомпаний</strong></div>
+            <div class="advantages__list-item"><strong>Выгодные</strong> тарифы</div>
+            <div class="advantages__list-item"><strong>Скидки</strong> и бонусы</div>
+        </div>
         <a href="#" class="content__more">Узнать о всех преимуществах <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
     </div>
         <div class="content__service">
@@ -46,17 +45,23 @@
     <div class="content__specials">
         <div class="content__title">Спецпредложения</div>
                 <div class="special__item specials__italy">
-                    <p class="specials__destination"><strong>Неаполь</strong> (Италия) туда и обратно</p>
-                    <p class="specials__price">15 756 руб. (все сборы включены)</p>
+                    <div class="specials__about">
+                        <p class="specials__destination"><strong>Неаполь</strong> (Италия) <br> туда и обратно</p>
+                        <p class="specials__price"><strong>15 756 руб.</strong><br> (все сборы включены)</p>
+                        </div>
                 </div>
                 <div class="special__item specials__india">
+                    <div class="specials__about">
                     <p class="specials__destination"><strong>Агра</strong> (Индия)<br>туда и обратно</p>
-                    <p class="specials__price--blue">35 430 руб.<br>(все сборы включены)</p>
+                    <p class="specials__price specials__price--blue"><strong>35 430 руб.</strong><br>(все сборы включены)</p>
                 </div>
+            </div>
                 <div class="special__item specials__usa">
+                    <div class="specials__about">
                     <p class="specials__destination"><strong>Нью-Йорк (США)</strong><br>туда и обратно</p>
-                    <p class="specials__price">75 756 руб.<br>(все сборы включены)</p>
+                    <p class="specials__price"><strong>75 756 руб.</strong><br>(все сборы включены)</p>
                 </div>
+            </div>
         <a href="#" class="content__more">Посмотреть остальные 12 спецпредложений <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
     </div>
 </div>

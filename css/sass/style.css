@@ -1,6 +1,7 @@
 * {
   margin: 0;
-  font-family: "Arial"; }
+  font-family: "Arial";
+  overflow-x: hidden; }
 
 .central {
   min-width: 980px; }
@@ -12,7 +13,8 @@
   list-style-type: none;
   padding: 10px;
   float: left;
-  font-size: 20px; }
+  font-size: 20px;
+  margin-right: 41%; }
 
 .main-nav__item {
   display: inline-block;
@@ -39,16 +41,16 @@
 
 .main-nav__user-items {
   list-style-type: none;
-  text-align: right;
-  padding-top: 25px; }
+  text-align: left;
+  padding-top: 30px; }
 
 .main-nav__user-item {
-  font-size: 13px;
+  font-size: 15px;
   text-decoration-style: dashed;
   -webkit-text-decoration-style: dashed; }
 
 .main-nav__user-login {
-  color: #fa68be; }
+  color: #f80895; }
 
 .main-nav__user-login::before {
   content: url("../../images/lock.png");
@@ -57,7 +59,8 @@
   padding: 5px; }
 
 .main-nav__user-register {
-  color: #999999; }
+  color: #999999;
+  margin-right: 10px; }
 
 .header {
   width: 100vw;
@@ -101,7 +104,33 @@
   color: #ffffff; }
 
 .specials__italy {
-  background: url("../../images/italy.png") no-repeat; }
+  background: url("../../images/italy.png") no-repeat;
+  position: relative; }
+
+.specials__about {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 0 0 4px 4px;
+  bottom: 27px;
+  height: 55px;
+  width: 458px;
+  overflow: hidden;
+  margin-top: 51px; }
+
+.specials__destination {
+  float: left;
+  margin: 10px 18px; }
+
+.specials__price {
+  margin: 10px;
+  position: relative;
+  left: 103px; }
+  .specials__price strong {
+    color: #fff000; }
+
+.specials__price--blue {
+  left: 130px; }
+  .specials__price--blue strong {
+    color: #00f0ff; }
 
 .specials__india {
   background: url("../../images/india.png") no-repeat; }
@@ -114,11 +143,15 @@
   margin-bottom: 20px; }
 
 .advantages__list {
-  margin: 10px; }
+  margin: 10px;
+  padding-left: 20px; }
 
 .advantages__list-item {
-  padding: 5px;
-  list-style-image: url("../../images/star.png"); }
+  padding: 5px; }
+  .advantages__list-item:before {
+    content: url("../../images/star.png");
+    position: absolute;
+    left: 115px; }
 
 .content__more {
   color: #0071bb; }
@@ -128,7 +161,7 @@
   margin-bottom: 20px; }
 
 .content__service {
-  float: right; }
+  width: 80%; }
 
 .fa {
   color: #0071bb;
@@ -178,15 +211,11 @@
   padding-bottom: 7px; }
 
 .footer__share {
-  padding-left: 280px; }
+  padding-left: 140px; }
 
 .footer__link {
   float: right;
   color: #999999;
   font-size: 13px; }
-
-.wrapper {
-  overflow-x: hidden;
-  min-width: 900px; }
 
 /*# sourceMappingURL=style.css.map */
