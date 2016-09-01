@@ -3,18 +3,17 @@
   font-family: "Arial";
   overflow-x: hidden; }
 
-.central {
-  min-width: 980px; }
-
-.main-nav {
-  margin: 30px 100px; }
+.body {
+  margin: 0 auto;
+  min-width: 980px;
+  max-width: 1400px;
+  box-sizing: border-box; }
 
 .main-nav__items {
-  list-style-type: none;
-  padding: 10px;
   float: left;
   font-size: 20px;
-  margin-right: 41%; }
+  margin: 36px 6%;
+  list-style-type: none; }
 
 .main-nav__item {
   display: inline-block;
@@ -30,8 +29,8 @@
   border-radius: 4px; }
   .main-nav__item--active::after {
     position: absolute;
-    left: 185px;
-    top: 95px;
+    left: 205px;
+    top: 93px;
     content: "";
     height: 0;
     width: 0;
@@ -41,26 +40,28 @@
 
 .main-nav__user-items {
   list-style-type: none;
-  text-align: left;
-  padding-top: 30px; }
+  text-align: right;
+  padding-top: 55px;
+  margin-right: 10%; }
 
 .main-nav__user-item {
   font-size: 15px;
   text-decoration-style: dashed;
-  -webkit-text-decoration-style: dashed; }
+  -webkit-text-decoration-style: dashed;
+  overflow: hidden; }
 
 .main-nav__user-login {
-  color: #f80895; }
-
-.main-nav__user-login::before {
-  content: url("../../images/lock.png");
-  position: relative;
-  top: 2px;
-  padding: 5px; }
+  color: #f80895;
+  padding: 25px; }
+  .main-nav__user-login::before {
+    content: url("../../images/lock.png");
+    position: relative;
+    bottom: -2px;
+    right: 9px; }
 
 .main-nav__user-register {
   color: #999999;
-  margin-right: 10px; }
+  margin-left: 22px; }
 
 .header {
   width: 100vw;
@@ -72,7 +73,7 @@
 .header__text {
   text-shadow: 1px 1px 2px #0096e7;
   color: #ffffff;
-  margin-left: 90px;
+  margin-left: 9%;
   font-size: 20px;
   line-height: 1.5; }
   .header__text span {
@@ -80,32 +81,28 @@
     color: #ffffff; }
 
 .content {
-  margin: 40px 100px;
-  width: 100%;
+  padding: 30px 10%;
   color: #333333; }
 
 .content__left {
-  width: 50%;
+  width: 500px;
   float: left;
-  display: inline-block; }
-
-.content__specials {
   display: inline-block;
-  margin-left: 60px;
-  min-width: 40%; }
+  padding-right: 191px; }
 
 .content__advantages {
-  float: left;
-  width: 60%;
+  width: 480px;
   margin-bottom: 60px; }
 
+.content__specials {
+  width: 460px; }
+
 .special__item {
-  min-height: 125px;
-  color: #ffffff; }
+  color: #ffffff;
+  margin-bottom: 15px; }
 
 .specials__italy {
-  background: url("../../images/italy.png") no-repeat;
-  position: relative; }
+  background: url("../../images/italy.png") no-repeat; }
 
 .specials__about {
   background: rgba(0, 0, 0, 0.45);
@@ -143,15 +140,16 @@
   margin-bottom: 20px; }
 
 .advantages__list {
-  margin: 10px;
-  padding-left: 20px; }
+  margin: 10px; }
 
 .advantages__list-item {
+  overflow-y: hidden;
   padding: 5px; }
   .advantages__list-item:before {
     content: url("../../images/star.png");
-    position: absolute;
-    left: 115px; }
+    position: relative;
+    padding: 15px;
+    bottom: 2px; }
 
 .content__more {
   color: #0071bb; }
@@ -161,14 +159,14 @@
   margin-bottom: 20px; }
 
 .content__service {
-  width: 80%; }
+  width: 500px; }
 
 .fa {
   color: #0071bb;
   vertical-align: middle; }
 
 .banner {
-  margin: 5px 100px; }
+  margin: 5px 10%; }
 
 .banner__image {
   border: 1px solid #dcdcdc;
@@ -196,7 +194,7 @@
   float: left; }
 
 .footer__left, .footer__right {
-  margin: 40px 80px; }
+  margin: 40px 9%; }
 
 .contact__phone, .footer__contacts-link {
   padding-bottom: 5px;
@@ -210,12 +208,12 @@
   text-align: right;
   padding-bottom: 7px; }
 
-.footer__share {
-  padding-left: 140px; }
-
 .footer__link {
   float: right;
   color: #999999;
   font-size: 13px; }
+
+.footer__share {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

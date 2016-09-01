@@ -12,6 +12,15 @@ $central: 100px;
   overflow-x: hidden;
 }
 
+
+.body {
+  margin: 0 auto;
+  min-width: 980px;
+  max-width: 1400px;
+  box-sizing: border-box;
+}
+
+
 @mixin active() {
   padding: 12px 20px;
   color: #ffffff;
@@ -19,11 +28,6 @@ $central: 100px;
   background-color: $bg-blue;
   text-decoration: none;
   border-radius: 4px;
-}
-
-@mixin nav() {
-  list-style-type: none;
-  padding: 10px;
 }
 
 @mixin triangle($width, $dir, $color) {
@@ -36,19 +40,11 @@ $central: 100px;
   }
 }
 
-.central {
-  min-width: 980px;
-}
-
-.main-nav {
-  margin: 30px $central;
-}
-
 .main-nav__items {
-  @include nav;
   float: left;
   font-size: 20px;
-  margin-right: 41%;
+  margin: 36px 6%;
+  list-style-type: none;
 }
 
 .main-nav__item {
@@ -61,8 +57,8 @@ $central: 100px;
   @include active;
   &::after {
     position: absolute;
-    left: 185px;
-    top: 95px;
+    left: 205px;
+    top: 93px;
     content: "";
     @include triangle(15px, down, $bg-blue);
 
@@ -71,30 +67,32 @@ $central: 100px;
 
 .main-nav__user-items {
   list-style-type: none;
-  text-align: left;
-  padding-top: 30px;
+  text-align: right;
+  padding-top: 55px;
+  margin-right: 10%;
 }
 
 .main-nav__user-item {
   font-size: 15px;
   text-decoration-style: dashed;
   -webkit-text-decoration-style: dashed;
+  overflow: hidden;
 }
 
 .main-nav__user-login {
   color: $link-pink;
-}
-
-.main-nav__user-login::before {
-  content: url("../../images/lock.png");
-  position: relative;
-  top: 2px;
-  padding: 5px;
+  padding: 25px;
+  &::before {
+    content: url("../../images/lock.png");
+    position: relative;
+    bottom: -2px;
+    right: 9px;
+  }
 }
 
 .main-nav__user-register {
   color: $link-grey;
-  margin-right: 10px;
+  margin-left: 22px;
 }
 
 .header {
@@ -108,7 +106,7 @@ $central: 100px;
 .header__text {
   text-shadow: 1px 1px 2px #0096e7;
   color: #ffffff;
-  margin-left: 90px;
+  margin-left: 9%;
   font-size: 20px;
   line-height: 1.5;
   & span {
@@ -118,37 +116,33 @@ $central: 100px;
 }
 
 .content {
-  margin: 40px $central;
-  width: 100%;
+  padding: 30px 10%;
   color: #333333;
 }
 
 .content__left {
-  width: 50%;
+  width: 500px;
   float: left;
   display: inline-block;
-}
-
-.content__specials {
-  display: inline-block;
-  margin-left: 60px;
-  min-width: 40%;
+  padding-right: 191px;
 }
 
 .content__advantages {
-  float: left;
-  width: 60%;
+  width: 480px;
   margin-bottom: 60px;
 }
 
+.content__specials {
+  width: 460px;
+}
+
 .special__item {
-  min-height: 125px;
   color: #ffffff;
+  margin-bottom: 15px;
 }
 
 .specials__italy {
   background: url("../../images/italy.png") no-repeat;
-  position: relative;
 }
 
 .specials__about {
@@ -197,15 +191,16 @@ $central: 100px;
 
 .advantages__list {
   margin: 10px;
-  padding-left: 20px;
 }
 
 .advantages__list-item {
+  overflow-y: hidden;
   padding: 5px;
   &:before {
     content: url("../../images/star.png");
-    position: absolute;
-    left: 115px;
+    position: relative;
+    padding: 15px;
+    bottom: 2px;
   }
 }
 
@@ -219,7 +214,7 @@ $central: 100px;
 }
 
 .content__service {
-  width: 80%;
+  width: 500px;
 }
 
 .fa {
@@ -228,7 +223,7 @@ $central: 100px;
 }
 
 .banner {
-  margin: 5px $central;
+  margin: 5px 10%;
 }
 
 .banner__image {
@@ -262,7 +257,7 @@ $central: 100px;
 }
 
 .footer__left, .footer__right {
-  margin: 40px 80px;
+  margin: 40px 9%;
 }
 
 .contact__phone, .footer__contacts-link {
@@ -280,12 +275,12 @@ $central: 100px;
   padding-bottom: 7px;
 }
 
-.footer__share {
-padding-left: 140px;
-}
-
 .footer__link {
   float: right;
   color: $link-grey;
   font-size: 13px;
+}
+
+.footer__share {
+  text-align: center;
 }
