@@ -55,7 +55,7 @@
   color: #f80895;
   padding: 25px; }
   .main-nav__user-login::before {
-    content: url("../../images/lock.png");
+    content: url("../images/lock.png");
     position: relative;
     bottom: -2px;
     right: 9px; }
@@ -72,7 +72,7 @@
   color: #ffffff; }
 
 .header__text {
-  text-shadow: 1px 1px 2px #0a77b3;
+  text-shadow: 1px 1px 2px #0096e7;
   color: #ffffff;
   margin-left: 9%;
   font-size: 20px;
@@ -104,12 +104,11 @@
   margin-bottom: 15px; }
 
 .specials__italy {
-  background: url("../../images/italy.png") no-repeat; }
+  background: url("../images/italy.png") no-repeat; }
 
 .specials__about {
   background: rgba(0, 0, 0, 0.45);
-  border-radius: 0 4px;
-  behavior: url(../../pie/PIE.htc);
+  border-radius: 0 0 4px 4px;
   bottom: 27px;
   height: 55px;
   width: 458px;
@@ -133,10 +132,10 @@
     color: #00f0ff; }
 
 .specials__india {
-  background: url("../../images/india.png") no-repeat; }
+  background: url("../images/india.png") no-repeat; }
 
 .specials__usa {
-  background: url("../../images/usa.png") no-repeat; }
+  background: url("../images/usa.png") no-repeat; }
 
 .content__title {
   font-size: 21px;
@@ -149,7 +148,7 @@
   overflow-y: hidden;
   padding: 5px; }
   .advantages__list-item:before {
-    content: url("../../images/star.png");
+    content: url("../images/star.png");
     position: relative;
     padding: 15px;
     bottom: 2px; }

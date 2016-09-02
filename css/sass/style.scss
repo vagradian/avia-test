@@ -1,18 +1,15 @@
-$header-bg-color: #00baf0;
-$link-login: #f80895;
-$link-register: #999999;
-$link-main: #0071bb;
-$link-footer: #666666;
-$foooter-color: #666666;
+$bg-blue: #00baf0;
+$link-pink: #f80895;
+$link-light-grey: #999999;
+$link-blue: #0071bb;
+$grey: #666666;
 $font: "Arial";
-$central: 100px;
 
 * {
   margin: 0;
   font-family: $font;
   overflow-x: hidden;
 }
-
 
 .body {
   margin: 0 auto;
@@ -21,12 +18,11 @@ $central: 100px;
   box-sizing: border-box;
 }
 
-
 @mixin active() {
   padding: 12px 20px;
   color: #ffffff;
   font-weight: bold;
-  background-color: $header-bg-color;
+  background-color: $bg-blue;
   text-decoration: none;
   border-radius: 4px;
 }
@@ -51,19 +47,20 @@ $central: 100px;
 .main-nav__item {
   display: inline-block;
   padding: 10px;
-  color: $link-main;
+  color: $link-blue;
 }
 
 .main-nav__item--active {
   @include active;
-  &::after {
-    position: absolute;
-    left: 205px;
-    top: 93px;
-    content: "";
-    @include triangle(15px, down, $header-bg-color);
+  margin-bottom: -16px;
+}
 
-  }
+.triangle {
+  @include triangle(15px, down, $bg-blue);
+  position: relative;
+  top: 10px;
+  left: 65px;
+
 }
 
 .main-nav__user-items {
@@ -81,7 +78,7 @@ $central: 100px;
 }
 
 .main-nav__user-login {
-  color: $link-login;
+  color: $link-pink;
   padding: 25px;
   &::before {
     content: url("../../images/lock.png");
@@ -92,20 +89,20 @@ $central: 100px;
 }
 
 .main-nav__user-register {
-  color: $link-register;
+  color: $link-light-grey;
   margin-left: 22px;
 }
 
 .header {
   width: 100vw;
-  background-color: $header-bg-color;
+  background-color: $bg-blue;
   padding: 10px;
   text-align: left;
   color: #ffffff;
 }
 
 .header__text {
-  text-shadow: 1px 1px 2px #0096e7;
+  text-shadow: 1px 1px 2px #0a77b3;
   color: #ffffff;
   margin-left: 9%;
   font-size: 20px;
@@ -114,6 +111,11 @@ $central: 100px;
     font-weight: bold;
     color: #ffffff;
   }
+}
+
+.central {
+  width: 1400px;
+  margin: 0 auto;
 }
 
 .content {
@@ -125,16 +127,12 @@ $central: 100px;
   width: 500px;
   float: left;
   display: inline-block;
-  padding-right: 190px;
+  padding-right: 14%;
 }
 
 .content__advantages {
   width: 480px;
   margin-bottom: 60px;
-}
-
-.content__specials {
-  width: 460px;
 }
 
 .special__item {
@@ -148,7 +146,8 @@ $central: 100px;
 
 .specials__about {
   background: rgba(0, 0, 0, 0.45);
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 4px;
+  behavior: url(../../pie/PIE.htc);
   bottom: 27px;
   height: 55px;
   width: 458px;
@@ -206,7 +205,7 @@ $central: 100px;
 }
 
 .content__more {
-  color: $link-main;
+  color: $link-blue;
 }
 
 .service__title {
@@ -219,7 +218,7 @@ $central: 100px;
 }
 
 .fa {
-  color: $link-main;
+  color: $link-blue;
   vertical-align: middle;
 }
 
@@ -235,7 +234,7 @@ $central: 100px;
 }
 
 .banner__ad {
-  color: $foooter-color;
+  color: $grey;
   font-size: 13px;
 }
 
@@ -243,32 +242,35 @@ $central: 100px;
   margin-top: 10px;
   background-color: #f9f9f9;
   padding: 10px;
+  width: 100%;
 }
 
 .footer__contacts {
   float: left;
-  margin: 10px;
+  margin: 10px 1px;
   color: #666666;
   font-size: 13px;
   padding-top: 15px;
 }
 
 .footer__left {
+  margin: 40px 9%;
   float: left;
 }
 
-.footer__left, .footer__right {
-  margin: 40px 9%;
+.footer__links {
+  display: inline-block;
+  margin: 40px 15%;
 }
 
 .contact__phone, .footer__contacts-link {
   padding-bottom: 5px;
-  color: $foooter-color;
+  color: $grey;
 }
 
 .footer__copyright {
-  padding: 10px;
-  color: $foooter-color;
+  padding: 10px 1px;
+  color: $grey;
 }
 
 .footer__payment-methods {
@@ -278,10 +280,6 @@ $central: 100px;
 
 .footer__link {
   float: right;
-  color: $link-register;
+  color: $link-light-grey;
   font-size: 13px;
-}
-
-.footer__share {
-  text-align: center;
 }
