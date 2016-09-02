@@ -1,8 +1,9 @@
-$bg-blue: #00baf0;
-$link-pink: #f80895;
-$link-grey: #999999;
-$link-blue: #0071bb;
+$header-bg-color: #00baf0;
+$link-login: #f80895;
+$link-register: #999999;
+$link-main: #0071bb;
 $link-footer: #666666;
+$foooter-color: #666666;
 $font: "Arial";
 $central: 100px;
 
@@ -25,7 +26,7 @@ $central: 100px;
   padding: 12px 20px;
   color: #ffffff;
   font-weight: bold;
-  background-color: $bg-blue;
+  background-color: $header-bg-color;
   text-decoration: none;
   border-radius: 4px;
 }
@@ -50,7 +51,7 @@ $central: 100px;
 .main-nav__item {
   display: inline-block;
   padding: 10px;
-  color: $link-blue;
+  color: $link-main;
 }
 
 .main-nav__item--active {
@@ -60,7 +61,7 @@ $central: 100px;
     left: 205px;
     top: 93px;
     content: "";
-    @include triangle(15px, down, $bg-blue);
+    @include triangle(15px, down, $header-bg-color);
 
   }
 }
@@ -80,7 +81,7 @@ $central: 100px;
 }
 
 .main-nav__user-login {
-  color: $link-pink;
+  color: $link-login;
   padding: 25px;
   &::before {
     content: url("../../images/lock.png");
@@ -91,13 +92,13 @@ $central: 100px;
 }
 
 .main-nav__user-register {
-  color: $link-grey;
+  color: $link-register;
   margin-left: 22px;
 }
 
 .header {
   width: 100vw;
-  background-color: $bg-blue;
+  background-color: $header-bg-color;
   padding: 10px;
   text-align: left;
   color: #ffffff;
@@ -205,7 +206,7 @@ $central: 100px;
 }
 
 .content__more {
-  color: $link-blue;
+  color: $link-main;
 }
 
 .service__title {
@@ -218,7 +219,7 @@ $central: 100px;
 }
 
 .fa {
-  color: $link-blue;
+  color: $link-main;
   vertical-align: middle;
 }
 
@@ -234,7 +235,7 @@ $central: 100px;
 }
 
 .banner__ad {
-  color: #666666;
+  color: $foooter-color;
   font-size: 13px;
 }
 
@@ -262,12 +263,12 @@ $central: 100px;
 
 .contact__phone, .footer__contacts-link {
   padding-bottom: 5px;
-  color: #666666;
+  color: $foooter-color;
 }
 
 .footer__copyright {
   padding: 10px;
-  color: #666666;
+  color: $foooter-color;
 }
 
 .footer__payment-methods {
@@ -277,7 +278,7 @@ $central: 100px;
 
 .footer__link {
   float: right;
-  color: $link-grey;
+  color: $link-register;
   font-size: 13px;
 }
 
