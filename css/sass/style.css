@@ -1,148 +1,110 @@
-$bg-blue: #00baf0;
-$link-pink: #f80895;
-$link-light-grey: #999999;
-$link-blue: #0071bb;
-$grey: #666666;
-$font: "Arial";
-
 * {
   margin: 0;
-  font-family: $font;
-  overflow-x: hidden;
-}
+  font-family: "Arial";
+  overflow-x: hidden; }
 
 .body {
   margin: 0 auto;
   min-width: 980px;
   max-width: 1400px;
-  box-sizing: border-box;
-}
-
-@mixin active() {
-  padding: 12px 20px;
-  color: #ffffff;
-  font-weight: bold;
-  background-color: $bg-blue;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-@mixin triangle($width, $dir, $color) {
-  @if $dir == down {
-    height: 0;
-    width: 0;
-    border-left: $width solid transparent;
-    border-right: $width solid transparent;
-    border-top: $width solid $color;
-  }
-}
+  box-sizing: border-box; }
 
 .main-nav__items {
   float: left;
   font-size: 20px;
   margin: 36px 6%;
-  list-style-type: none;
-}
+  list-style-type: none; }
 
 .main-nav__item {
   display: inline-block;
   padding: 10px;
-  color: $link-blue;
-}
+  color: #0071bb; }
 
 .main-nav__item--active {
-  @include active;
-  margin-bottom: -16px;
-}
+  padding: 12px 20px;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #00baf0;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-bottom: -16px; }
 
 .triangle {
-  @include triangle(15px, down, $bg-blue);
+  height: 0;
+  width: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #00baf0;
   position: relative;
   top: 10px;
-  left: 65px;
-
-}
+  left: 65px; }
 
 .main-nav__user-items {
   list-style-type: none;
   text-align: right;
   padding-top: 55px;
-  margin-right: 10%;
-}
+  margin-right: 10%; }
 
 .main-nav__user-item {
   font-size: 15px;
   text-decoration-style: dashed;
   -webkit-text-decoration-style: dashed;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .main-nav__user-login {
-  color: $link-pink;
-  padding: 25px;
-  &::before {
+  color: #f80895;
+  padding: 25px; }
+  .main-nav__user-login::before {
     content: url("../../images/lock.png");
     position: relative;
     bottom: -2px;
-    right: 9px;
-  }
-}
+    right: 9px; }
 
 .main-nav__user-register {
-  color: $link-light-grey;
-  margin-left: 22px;
-}
+  color: #999999;
+  margin-left: 22px; }
 
 .header {
   width: 100vw;
-  background-color: $bg-blue;
+  background-color: #00baf0;
   padding: 10px;
   text-align: left;
-  color: #ffffff;
-}
+  color: #ffffff; }
 
 .header__text {
   text-shadow: 1px 1px 2px #0a77b3;
   color: #ffffff;
   margin-left: 9%;
   font-size: 20px;
-  line-height: 1.5;
-  & span {
+  line-height: 1.5; }
+  .header__text span {
     font-weight: bold;
-    color: #ffffff;
-  }
-}
+    color: #ffffff; }
 
 .central {
   width: 1400px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .content {
   padding: 30px 10%;
-  color: #333333;
-}
+  color: #333333; }
 
 .content__left {
   width: 500px;
   float: left;
   display: inline-block;
-  padding-right: 14%;
-}
+  padding-right: 14%; }
 
 .content__advantages {
   width: 480px;
-  margin-bottom: 60px;
-}
+  margin-bottom: 60px; }
 
 .special__item {
   color: #ffffff;
-  margin-bottom: 15px;
-}
+  margin-bottom: 15px; }
 
 .specials__italy {
-  background: url("../../images/italy.png") no-repeat;
-}
+  background: url("../../images/italy.png") no-repeat; }
 
 .specials__about {
   background: rgba(0, 0, 0, 0.45);
@@ -152,134 +114,109 @@ $font: "Arial";
   height: 55px;
   width: 458px;
   overflow: hidden;
-  margin-top: 51px;
-}
+  margin-top: 51px; }
 
 .specials__destination {
   float: left;
-  margin: 10px 18px;
-}
+  margin: 10px 18px; }
 
 .specials__price {
   margin: 10px;
   position: relative;
-  left: 103px;
-  & strong {
-    color: #fff000;
-  }
-}
+  left: 103px; }
+  .specials__price strong {
+    color: #fff000; }
 
 .specials__price--blue {
-  left: 130px;
-  & strong {
-    color: #00f0ff;
-  }
-}
+  left: 130px; }
+  .specials__price--blue strong {
+    color: #00f0ff; }
 
 .specials__india {
-  background: url("../../images/india.png") no-repeat;
-}
+  background: url("../../images/india.png") no-repeat; }
 
 .specials__usa {
-  background: url("../../images/usa.png") no-repeat;
-}
+  background: url("../../images/usa.png") no-repeat; }
 
 .content__title {
   font-size: 21px;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .advantages__list {
-  margin: 10px;
-}
+  margin: 10px; }
 
 .advantages__list-item {
   overflow-y: hidden;
-  padding: 5px;
-  &:before {
+  padding: 5px; }
+  .advantages__list-item:before {
     content: url("../../images/star.png");
     position: relative;
     padding: 15px;
-    bottom: 2px;
-  }
-}
+    bottom: 2px; }
 
 .content__more {
-  color: $link-blue;
-}
+  color: #0071bb; }
 
 .service__title {
   font-size: 21px;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .content__service {
-  width: 500px;
-}
+  width: 500px; }
 
 .fa {
-  color: $link-blue;
-  vertical-align: middle;
-}
+  color: #0071bb;
+  vertical-align: middle; }
 
 .banner {
-  margin: 5px 10%;
-}
+  margin: 5px 10%; }
 
 .banner__image {
   border: 1px solid #dcdcdc;
   padding: 45px;
   text-align: center;
-  color: #ededed;
-}
+  color: #ededed; }
 
 .banner__ad {
-  color: $grey;
-  font-size: 13px;
-}
+  color: #666666;
+  font-size: 13px; }
 
 .footer {
   margin-top: 10px;
   background-color: #f9f9f9;
   padding: 10px;
-  width: 100%;
-}
+  width: 100%; }
 
 .footer__contacts {
   float: left;
   margin: 10px 1px;
   color: #666666;
   font-size: 13px;
-  padding-top: 15px;
-}
+  padding-top: 15px; }
 
 .footer__left {
   margin: 40px 9%;
-  float: left;
-}
+  float: left; }
 
 .footer__links {
   display: inline-block;
-  margin: 40px 15%;
-}
+  margin: 40px 15%; }
 
 .contact__phone, .footer__contacts-link {
   padding-bottom: 5px;
-  color: $grey;
-}
+  color: #666666; }
 
 .footer__copyright {
   padding: 10px 1px;
-  color: $grey;
-}
+  color: #666666; }
 
 .footer__payment-methods {
   text-align: right;
-  padding-bottom: 7px;
-}
+  padding-bottom: 7px; }
 
 .footer__link {
   float: right;
-  color: $link-light-grey;
-  font-size: 13px;
-}
+  color: #999999;
+  font-size: 13px; }
+
+/*# sourceMappingURL=style.css.map */
